@@ -10,45 +10,7 @@ import messageImage from './assets/speech-bubble.png';
 export default function App() {
   return (
     <View style={styles.container}>
-
-<TouchableOpacity>
-        <View>
-          <AntDesign name="pluscircle" size={24} color="blue" />
-        </View>
-      </TouchableOpacity>
-
-      <TouchableOpacity>
-        <View>
-          <Ionicons name="search" size={24} color="black" />
-        </View>
-      </TouchableOpacity>
-
-      <TouchableOpacity>
-        <View>
-          <Feather name="bell" size={24} color="black" />
-        </View>
-      </TouchableOpacity>
-
-      <TouchableOpacity>
-        <View>
-          <Entypo name="chat" size={24} color="black" />
-        </View>
-      </TouchableOpacity>
-
-      <TouchableOpacity>
-        <View>
-          <Ionicons name="briefcase-outline" size={24} color="black" />
-        </View>
-      </TouchableOpacity>
-
-      <TouchableOpacity>
-        <View>
-          <FontAwesome name="user" size={24} color="black" />
-        </View>
-      </TouchableOpacity>
-
       <Text style={styles.message}>Messages</Text>
-
 
       <TouchableOpacity style={styles.iconButton}>
         <View style={styles.iconBackground}>
@@ -62,27 +24,64 @@ export default function App() {
         </View>
       </View>
       
-
       <Text style={styles.middleTitle}>No Messages</Text>
       <Text style={styles.middleText}> When you have messages, you'll see</Text>
       <Text style={styles.middleText}> them here.</Text>
+      
+      
+      <TouchableOpacity style={styles.plusButton}>
+          <View>
+            <AntDesign name="pluscircle" size={50} color="blue" />
+          </View>
+        </TouchableOpacity>
 
-      <Text></Text>
+      <View style= {styles.taskBar}>
+        <TouchableOpacity style = {styles.taskBarIcons}>
+          <View>
+            <Ionicons name="search" size={24} color="black" />
+          </View>
+        </TouchableOpacity>
 
+        <TouchableOpacity style = {styles.taskBarIcons}>
+          <View>
+            <Feather name="bell" size={24} color="black" />
+          </View>
+        </TouchableOpacity>
 
+        <TouchableOpacity style = {styles.taskBarIcons}>
+          <View>
+            <Entypo name="chat" size={24} color="black" />
+          </View>
+        </TouchableOpacity>
 
+        <TouchableOpacity style = {styles.taskBarIcons}>
+          <View>
+            <Ionicons name="briefcase-outline" size={24} color="black" />
+          </View>
+        </TouchableOpacity>
+
+        <TouchableOpacity style = {styles.taskBarIcons}>
+          <View>
+            <FontAwesome name="user" size={24} color="black" />
+          </View>
+        </TouchableOpacity>
+      </View>
 
       <StatusBar style="auto" />
     </View>
   );
 }
 
+
 const styles = StyleSheet.create({
   container: {
+    display: 'flex',
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+    flexDirection: 'column',
+    margin: 0,
   },
 
   message: {
@@ -136,4 +135,23 @@ const styles = StyleSheet.create({
   messageiconImage: {
     paddingTop: 70,
   },
+
+  taskBar: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    position: 'absolute',
+    bottom: 0,
+  },
+
+  taskBarIcons: {
+   padding: 27.59, 
+  },
+
+  plusButton: {
+    position: 'absolute',
+    bottom: 80,
+    right: '6%',
+  }
+
 });
