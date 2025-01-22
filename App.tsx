@@ -1,6 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native';
 
+import {Ionicons, Entypo, Feather, FontAwesome, AntDesign } from '@expo/vector-icons';
+
+
 import iconImage from './assets/box.png';
 import messageImage from './assets/speech-bubble.png';
 
@@ -8,13 +11,41 @@ export default function App() {
   return (
     <View style={styles.container}>
 
+      <TouchableOpacity>
+        <View>
+          <AntDesign name="pluscircle" size={24} color="blue" />
+        </View>
+      </TouchableOpacity>
 
+      <TouchableOpacity>
+        <View>
+          <Ionicons name="search" size={24} color="black" />
+        </View>
+      </TouchableOpacity>
 
+      <TouchableOpacity>
+        <View>
+          <Feather name="bell" size={24} color="black" />
+        </View>
+      </TouchableOpacity>
 
+      <TouchableOpacity>
+        <View>
+          <Entypo name="chat" size={24} color="black" />
+        </View>
+      </TouchableOpacity>
 
+      <TouchableOpacity>
+        <View>
+          <Ionicons name="briefcase-outline" size={24} color="black" />
+        </View>
+      </TouchableOpacity>
 
-
-
+      <TouchableOpacity>
+        <View>
+          <FontAwesome name="user" size={24} color="black" />
+        </View>
+      </TouchableOpacity>
       
       <Text style={styles.message}>Messages</Text>
 
