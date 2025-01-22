@@ -29,7 +29,7 @@ export default function App() {
       <Text style={styles.middleText}> them here.</Text>
       
       
-      <TouchableOpacity style={styles.plusButton}>
+      <TouchableOpacity style={styles.plusButton} onPress = {() => alert('Alert button pressed!')}>
           <View>
             <AntDesign name="pluscircle" size={50} color="blue" />
           </View>
