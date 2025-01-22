@@ -11,7 +11,7 @@ export default function App() {
   return (
     <View style={styles.container}>
 
-      <TouchableOpacity>
+<TouchableOpacity>
         <View>
           <AntDesign name="pluscircle" size={24} color="blue" />
         </View>
@@ -46,7 +46,7 @@ export default function App() {
           <FontAwesome name="user" size={24} color="black" />
         </View>
       </TouchableOpacity>
-      
+
       <Text style={styles.message}>Messages</Text>
 
 
@@ -56,14 +56,16 @@ export default function App() {
         </View>
       </TouchableOpacity>
       
-
-      <View style={styles.messageiconBackground}>
-          <Image source={messageImage} style={{ width: 70, height: 70 }} />
+      <View style={styles.messageiconImage}>
+        <View style={styles.messageiconBackground}>
+            <Image source={messageImage} style={{ width: 70, height: 70,}} />
+        </View>
       </View>
+      
 
       <Text style={styles.middleTitle}>No Messages</Text>
-      <Text style={styles.middleText}> When you have messages, you'll see them here  </Text>
-
+      <Text style={styles.middleText}> When you have messages, you'll see</Text>
+      <Text style={styles.middleText}> them here.</Text>
 
       <Text></Text>
 
@@ -96,19 +98,20 @@ const styles = StyleSheet.create({
   middleTitle: {
     fontWeight: 'bold',
     fontSize: 22,
-    paddingTop: 210,
+    paddingTop: 50,
   },
 
   middleText: {
     paddingTop: 10,
     fontSize: 17,
+    color: '#a3a3a3',
   },
 
   iconButton: {
     position: 'absolute',
     top: 10,
     right: 10,
-    paddingTop: 80,
+    paddingTop: 60,
     paddingRight: 30,
   },
 
@@ -128,5 +131,9 @@ const styles = StyleSheet.create({
     height: 150,
     alignItems: 'center',
     justifyContent: 'center',
-  }
+  },
+
+  messageiconImage: {
+    paddingTop: 70,
+  },
 });
